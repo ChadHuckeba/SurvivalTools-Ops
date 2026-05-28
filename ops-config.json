@@ -1,0 +1,54 @@
+{
+  "ops_board": {
+    "node_id": "PVT_kwHOAneE784BZF-m",
+    "number": 12,
+    "fields": {
+      "status": "PVTSSF_lAHOAneE784BZF-mzhUHH8M",
+      "severity": "PVTSSF_lAHOAneE784BZF-mzhUHIE8",
+      "fingerprint": "PVTF_lAHOAneE784BZF-mzhUHIF0",
+      "ack_notes": "PVTF_lAHOAneE784BZF-mzhUHIF4"
+    }
+  },
+  "alert_taxonomy": {
+    "skill-linkage-failure": {
+      "default_severity": "Error",
+      "description": "Triggered when issue-to-project linkage fails and manual fallback is required."
+    },
+    "node-id-mismatch": {
+      "default_severity": "Error",
+      "description": "Triggered when cached board node IDs or field IDs mismatch GitHub API."
+    },
+    "service-health-failure": {
+      "default_severity": "Critical",
+      "description": "Triggered when a core ecosystem service goes offline or fails healthchecks."
+    },
+    "governance-violation": {
+      "default_severity": "Critical",
+      "description": "Triggered when an operation violates global/project policies or rules."
+    },
+    "provisioning-token-rotation": {
+      "default_severity": "Normal",
+      "description": "Triggered when the PROVISIONING_TOKEN is close to expiration and needs rotation."
+    },
+    "branch-not-cleaned-after-merge": {
+      "default_severity": "Normal",
+      "description": "Triggered when a branch remains uncleaned after PR merge."
+    }
+  },
+  "alert_body_schema": {
+    "required_sections": [
+      "Summary",
+      "Command Issued",
+      "Result",
+      "Self-Heal Description",
+      "Fingerprint",
+      "Severity",
+      "Affected Repo",
+      "Linked Issue"
+    ]
+  },
+  "garbage_collection": {
+    "enabled": false,
+    "_note": "Archival policy pending. See core-dotfiles issue #240."
+  }
+}
